@@ -14,6 +14,22 @@ body{
     letter-spacing: 1px;
     
 }
+button{
+    background-color: #ff0e83;
+    border: 1px solid white;
+    color: white;
+    padding: 13px 32px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all .5s;
+}
+button:hover{
+    background: white;
+    color: black;
+    border-color: #ff0e83;
+}
 /* HEADER */
 header{
     background: #4e2a84;
@@ -58,4 +74,17 @@ header{
     background-image: url(../img/b3.jpg);
     height: 800px;
     background-size: cover;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel h1{
+    font-size: 3.5rem;
+}
+.carousel p{
+    font-size: 1.1rem;
+    padding: 23px 0;
 }
