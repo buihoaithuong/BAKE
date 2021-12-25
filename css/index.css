@@ -30,6 +30,13 @@ button:hover{
     color: black;
     border-color: #ff0e83;
 }
+h2{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
 /* HEADER */
 header{
     background: #4e2a84;
@@ -147,7 +154,7 @@ header{
 .number__content{
     display: flex;
     justify-content: space-around; 
-    width: 70%;
+    max-width: 70%;
     margin: 0 auto;
     text-align: center;
 }
@@ -161,4 +168,48 @@ header{
     font-weight: 700;
     letter-spacing: 4px;
     padding: 24px 0;
+}
+
+/* sSERVICES */
+.services{
+    background-image: url(../img/s1.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 70px 0;
+}
+.services__content{
+    display: flex;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.services__item{
+    padding: 0 20px;
+}
+.services__item i {
+    width: 105px;
+    height: 105px;
+    background: white;
+    border: #4e2a84 solid 1px;
+    border-radius: 50%;
+    font-size: 3.75rem;
+    color: #4e2a84;
+    line-height: 105px;
+    transition: all .5s;
+}
+.services__item h3{
+    font-size: 1.5rem;
+    margin: 17px 0;
+    font-weight: 500;
+}
+.services__item p{
+    font-size: 0.875rem;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+.services__item button{
+    padding: 12px 27px;
+    border-width: 2px;
+}
+.services__item:hover i{
+     color: #ff0e83;
 }
