@@ -36,6 +36,7 @@ h2{
     margin-bottom: 3rem;
     text-align: center;
     letter-spacing: 2px;
+    padding-top: 70px;
 }
 /* HEADER */
 header{
@@ -176,7 +177,7 @@ header{
     background-image: url(../img/s1.jpg);
     background-size: cover;
     text-align: center;
-    padding: 70px 0;
+    padding-bottom: 70px;
 }
 .services__content{
     display: flex;
@@ -235,6 +236,7 @@ header{
 }
 .gallery__item{
     position: relative;
+    overflow: hidden;
 }
 .gallery__overlay{
     position: absolute;
@@ -252,9 +254,22 @@ header{
     bottom: 38px;
     right: 28px;
     font-size: 0.75rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all .5s;
 }
-h3{
+.gallery__item:hover .gallery__overlay p{
+    transform: translateY(0);
+    opacity: 1;
+}
+.gallery__overlay h3{
     font-size: 1.875rem;
+    transform: translateY(20px);
+    transition: all .5s;
+}
+.gallery__item:hover .gallery__overlay h3{
+    transform: translateY(0);
+    opacity: 1;
 }
 .gallery__overlay h3 span{
     font-weight: 300;
@@ -266,10 +281,11 @@ h3{
     background: white;
     display: block;
     margin-top: 10px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all .5s;
 }
-/* .gallery__overlay h3::before{
-    content: "hello";
+.gallery__item:hover .gallery__overlay h3::after{
+    transform: translateY(0);
+    opacity: 1;
 }
-.gallery__overlay h3::after{
-    content: "hello";
-} */
