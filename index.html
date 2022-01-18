@@ -30,13 +30,13 @@
         <div class="header__content">
             <p>BAKE</p>
             <nav>
-                <ul>
+                <ul id="mainNav">
                     <li class="active"><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">CLIENT</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#intro">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#feedback">CLIENT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -51,7 +51,7 @@
 
     </section>
     <!-- INTRO -->
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="intro__item intro__text">
             <div>
                 <h3>Tradition</h3>
@@ -124,7 +124,7 @@
 
     </section>
     <!-- SERVICES -->
-    <section class="services">
+    <section class="services" id="services">
         <h2>OUR SERVICES</h2>
         <div class="services__content">
             <div class="services__item">
@@ -154,7 +154,7 @@
         </div>
     </section>
     <!-- GALLERY -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <h2>OUR GALLERY</h2>
         <div class="gallery__content">
             <figure class="gallery__item g1">
@@ -324,7 +324,7 @@
         </div>
     </section>
     <!-- FEEDBACK -->
-    <section class="feedback">
+    <section class="feedback" id="feedback">
         <h2>Testimonials</h2>
         <div class="feedback__content">
             <div class="owl-carousel owl-theme">
@@ -355,7 +355,7 @@
 
     </section>
     <!-- CONTACT -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2>CONTACT</h2>
         <div class="contact__form">
             <form action=""> 
@@ -449,11 +449,12 @@
         </div>
         <div class="copyright">
             <p>©2022 Lorem ipsum dolor sit, amet consectetur adipisicing.| Desight by <span>Thuongxinhdep</span></p>
-        </div>
-        
-        
+        </div>        
     </footer>
-
+    <!-- BACK TO TOP -->
+    <a href="#" class="backToTop cd-top text-replace js-cd-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
         integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
@@ -482,6 +483,26 @@
                 }
             }
         })
+    </script>
+    <!-- back to top JS-->
+    <script src="./js/util.js"></script>
+    <script src="./js/backtotopmain.js"></script>
+    <!-- navigation bar JS -->
+    <script>
+        //tim the active
+        var mainNav = document.getElementById("mainNav");
+        var lisNav = mainNav.getElementsByTagName("li");
+        for (var i = 0;  i < lisNav.length;  i++) {
+            // tim the active
+            lisNav[i].addEventListener("click", function(){
+                var current = document.querySelector("#mainNav .active");
+                //xoa active
+                current.className = current.className.replace("active","");
+                //gan active 
+                this.className += "active";
+            });
+            
+        }
     </script>
 </body>
 
